@@ -2,10 +2,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@lucasgomesagacode/custom-option-select": [
+        "dist/lucasgomesagacode/custom-option-select/lucasgomesagacode-custom-option-select",
+        "dist/lucasgomesagacode/custom-option-select"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

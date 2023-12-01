@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Qwitcher+Grypen:wght@400;700&display=swap");
+@font-face {
+    font-family: porto-robert-medium;
+    src: url(../assets/fonts/PortoRoobert-Medium.otf) format("opentype");
+}
+
+main {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    background-color: transparent;
+    .title {
+        margin-bottom: 10px;
+        font-family: porto-robert-medium;
+    }
+    .select {
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 7px 12px;
+        background-color: white;
+        border: 1px solid #b3b3b3;
+
+        .date {
+            height: 100%;
+            border: none;
+            width: 100%;
+            outline: none;
+            &:disabled {
+                background-color: transparent;
+                color: #808080 !important;
+            }
+        }
+
+        &.active {
+            border: 1px solid #00a1fc;
+        }
+    }
+    .dropdown {
+        height: 0;
+        border: 1px solid #b3b3b3;
+        filter: drop-shadow(0px 0px 8px #e0e0e0);
+        border-radius: 4px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 82px;
+        background: white;
+        z-index: -1;
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        overflow-y: scroll;
+        .option {
+            padding: 0 12px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: #eef9ff;
+            }
+            .checkmark {
+                left: 0 !important;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .container-checkbox {
+                padding-left: 38px;
+                height: 50px;
+            }
+
+            &.sub-option {
+                .checkmark {
+                    left: 28px !important;
+                }
+                .container-checkbox {
+                    padding-left: 60px !important;
+                }
+                .general-input {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+
+        &.active {
+            max-height: 192px;
+            min-height: 100px;
+            height: 100vh;
+            z-index: 2;
+            visibility: visible;
+            &.size-3 {
+                min-height: 147px;
+            }
+            &.size-4-plus {
+                height: 100vh !important;
+            }
+        }
+
+        &.filled {
+            position: relative;
+            top: 4px !important;
+        }
+    }
+
+    &.bordered {
+        .title {
+            font-weight: 500 !important;
+            font-size: 10px !important;
+            line-height: 14px !important;
+            color: #808080 !important;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        .option-value {
+            padding-top: 14px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: black;
+            font-family: Open Sans;
+        }
+        .dropdown {
+            top: 51px;
+            height: 100%;
+        }
+    }
+
+    img {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.value {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    color: #808080;
+}
+
+.no-label {
+    font-weight: 500 !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    color: #808080 !important;
+    margin-bottom: 0 !important;
+}
+
+.disabled {
+    color: #808080 !important;
+}
