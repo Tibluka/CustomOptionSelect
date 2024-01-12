@@ -1,5 +1,5 @@
 <main [ngClass]="{'bordered': bordered, 'w-100': fillWidth}">
-    <div class="title">
+    <div class="title" *ngIf="label">
         {{label}}
     </div>
     <container-element [ngSwitch]="type">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="dropdown" #main
-            [ngClass]="{'active': dropdownStatus, 'filled': filled && dropdownStatus, 'size-3': options.length === 3, 'size-4-plus': options.length >=4}"
+            [ngClass]="{'active': dropdownStatus, 'no-label': !label, 'filled': filled && dropdownStatus, 'size-3': options.length === 3, 'size-4-plus': options.length >=4}"
             *ngIf="options.length > 0"
             [ngStyle]="{'height': options.length === 1 ? '50px' : '', 'min-height': options.length === 1 ? '50px' : ''}">
             <div class="option c-p" *ngIf="options[0].multiple">
@@ -34,8 +34,8 @@
             </div>
         </div>
         <div class="select" [ngClass]="{'invalid-field': invalid}" *ngSwitchCase="'DATE'">
-            <input onkeydown="return false" [disabled]="disabled" type="date" [value]="inicialValue" class="date option-value"
-                name="dateHourCreated" (change)="changeDate($event)">
+            <input onkeydown="return false" [disabled]="disabled" type="date" [value]="inicialValue"
+                class="date option-value" name="dateHourCreated" (change)="changeDate($event)">
         </div>
     </container-element>
 </main>

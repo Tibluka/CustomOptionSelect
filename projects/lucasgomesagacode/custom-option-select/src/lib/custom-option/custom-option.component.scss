@@ -126,6 +126,13 @@ main {
             line-height: 20px;
             color: black;
             font-family: Open Sans;
+
+            &.no-label {
+                height: 32.4px;
+                display: flex;
+                align-items: center;
+                padding: 0;
+            }
         }
         .dropdown {
             top: 51px;
@@ -158,4 +165,8 @@ main {
 
 .disabled {
     color: #808080 !important;
+}
+
+.invalid-field {
+    border: 1px solid red;
 }

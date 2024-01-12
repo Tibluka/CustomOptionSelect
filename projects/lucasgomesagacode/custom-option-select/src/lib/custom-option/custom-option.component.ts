@@ -31,7 +31,7 @@ export class CustomOptionComponent implements OnInit {
   @Input() options: Array<CustomOption> = [new CustomOption(true, '', '', '')];
   @Input() disabled: boolean | undefined;
   @Input() fillWidth: boolean | undefined;
-  @Input() invalid: boolean | undefined;
+  @Input() invalid: boolean | undefined = true;
   @Input() filled: boolean | undefined;
   @Input() updateInicialValue: any;
   @Output() selectOptionEmitter = new EventEmitter();
