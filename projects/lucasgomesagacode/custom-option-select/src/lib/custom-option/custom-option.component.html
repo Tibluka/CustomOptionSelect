@@ -5,7 +5,7 @@
     <container-element [ngSwitch]="type">
         <div class="select" [ngClass]="{'active': dropdownStatus, 'invalid-field': invalid}" *ngSwitchCase="'SELECT'">
             <div class="d-flex align-items-center w-100 h-100 option-value position-relative"
-                [ngClass]="{'no-label': !label && !value, 'disabled': disabled}" (click)="openOptions()">{{getValue()}}
+                [ngClass]="{'no-label': !label || !value, 'disabled': disabled}" (click)="openOptions()">{{getValue()}}
                 <img class="c-p" (click)="openOptions()"
                     src="https://corretor.portoseguro.com.br/col/static-files/giw3gdo/img/custom-option-arrow.svg"
                     alt="">
