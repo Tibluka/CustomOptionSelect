@@ -1,6 +1,6 @@
 {
   "name": "@lucasgomesagacode/custom-option-select",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"

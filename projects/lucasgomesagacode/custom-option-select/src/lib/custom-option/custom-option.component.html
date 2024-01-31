@@ -1,4 +1,4 @@
-<main [ngClass]="{'bordered': bordered, 'w-100': fillWidth}">
+<main [ngClass]="{'bordered': bordered, 'w-100': fillWidth, 'no-initial-value': !inicialValue && !getValue()}">
     <div class="title" *ngIf="label">
         {{label}}
     </div>

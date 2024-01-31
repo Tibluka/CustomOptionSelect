@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'testing';
 
   reasonList: Array<CustomOption> = [
-    new CustomOption(false, '', '', '')
+    new CustomOption(false, 'teste', 'teste', 'teste')
   ]
 
   selectOption(customOption: CustomOption){
